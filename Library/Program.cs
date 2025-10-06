@@ -1,2 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Library;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Book myBook = new Book("C# for beginners", "Bill Gates", "1234567"); //Creates new instance of book
+
+        //Output book information to the console
+        myBook.DisplayInfo();
+    }
+}
