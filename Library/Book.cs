@@ -8,24 +8,43 @@ using System.Threading.Tasks;
 namespace Library
 {
      class Book
-    {
-        string Title;
-        string Author;
-        string ISBN;
+    {    //Variables
+        private string title;
+        private string author;
+        private string isbn;
+
+        //Title property allows access to the private variable
+        public string Title
+        {
+            get { return title; } //Get Method
+            set { title = value; } //Setter
+        }
+
+        public string Author
+        {
+            get { return author; } //Getter
+            set { author = value; } //Setter
+        }
+
+        public string Isbn
+        {
+            get { return isbn; } //Getter
+            set {  isbn = value; } //Setter
+        }
 
         //Example of a constructor that allows us to construst a new Book Object
         public Book(string bookTitle, string bookAuthor, string bookISBN)
         {
-            Title = bookTitle;
-            Author = bookAuthor;
-            ISBN = bookISBN;
+            this.title = bookTitle;
+            this.author = bookAuthor;
+            this.isbn = bookISBN;
         }
 
         public void DisplayInfo()
         {
-            Console.WriteLine($"Book title; {Title}");
-            Console.WriteLine($"Book Author; {Author}");
-            Console.WriteLine($"Book ISBN; {ISBN}");
+            Console.WriteLine($"Book title; {title}");
+            Console.WriteLine($"Book Author; {author}");
+            Console.WriteLine($"Book ISBN; {isbn}");
             Console.WriteLine();
         }
 
